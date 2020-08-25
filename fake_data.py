@@ -80,6 +80,39 @@ data1={
   }
   data = list(filter(lambda d: d['id'] == venue_id, [data1, data2, data3]))[0]
 
+
+  venues = []
+    city_info = {}
+    venue_info = {"name":map_['name'],"id":map_['id']}
+    venues.append(venue_info)
+    if map_['city'] in city_map:
+       city_info['venues'].append(venue_info)
+
+    else:
+      city_map[map_['city']] = True
+      city_info = {"city":map_['city'],"state":map_['state'],"venues":venues}
+    data.append(city_info)  
+  data=[{
+    "city": "San Francisco",
+    "state": "CA",
+    "venues": [{
+      "id": 1,
+      "name": "The Musical Hop",
+      "num_upcoming_shows": 0,
+    }, {
+      "id": 3,
+      "name": "Park Square Live Music & Coffee",
+      "num_upcoming_shows": 1,
+    }]
+  }, {
+    "city": "New York",
+    "state": "NY",
+    "venues": [{
+      "id": 2,
+      "name": "The Dueling Pianos Bar",
+      "num_upcoming_shows": 0,
+    }]
+  }]
 # For Edit
 #------------------------------------------------------------------------------
 venue={
