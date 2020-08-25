@@ -1,0 +1,617 @@
+
+2020-08-12 15:58:25,489 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:511]
+2020-08-12 16:10:19,545 INFO: errors [in app.py:512]
+2020-08-12 16:11:46,356 ERROR: Exception on /artists/4 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 354, in show_artist
+    return render_template('pages/show_artist.html', artist=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_artist.html", line 68, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "app.py", line 70, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
+2020-08-12 16:11:50,165 ERROR: Exception on /artists/6 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 354, in show_artist
+    return render_template('pages/show_artist.html', artist=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_artist.html", line 54, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "app.py", line 70, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
+2020-08-12 16:11:53,349 ERROR: Exception on /artists/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 353, in show_artist
+    data = list(filter(lambda d: d['id'] == artist_id, [data1, data2, data3]))[0]
+IndexError: list index out of range
+2020-08-12 16:11:57,725 ERROR: Exception on /artists/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 353, in show_artist
+    data = list(filter(lambda d: d['id'] == artist_id, [data1, data2, data3]))[0]
+IndexError: list index out of range
+2020-08-12 16:12:30,581 ERROR: Exception on /artists/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 353, in show_artist
+    data = list(filter(lambda d: d['id'] == artist_id, [data1, data2, data3]))[0]
+IndexError: list index out of range
+2020-08-12 16:12:39,380 ERROR: Exception on /venues/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 215, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 71, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "app.py", line 70, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
+2020-08-18 16:34:17,557 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:513]
+2020-08-18 16:34:33,502 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:513]
+2020-08-18 16:35:33,602 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:513]
+2020-08-18 16:42:27,329 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:513]
+2020-08-18 16:42:45,790 ERROR: Exception on /venues/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 216, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 71, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 71, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
+2020-08-18 16:42:52,223 ERROR: Exception on /venues/create [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 223, in create_venue_form
+    form = VenueForm()
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 274, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 131, in process
+    field.process(formdata)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/csrf/core.py", line 43, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 141, in generate_csrf_token
+    token_key=self.meta.csrf_field_name
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 35, in generate_csrf
+    message='A secret key is required to use CSRF.'
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2020-08-18 16:56:18,732 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:525]
+2020-08-18 16:56:29,473 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:525]
+2020-08-18 16:57:29,171 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:525]
+2020-08-18 17:11:59,322 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:524]
+2020-08-18 17:12:33,533 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:524]
+2020-08-18 17:13:47,142 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:524]
+2020-08-18 17:14:43,722 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:524]
+2020-08-18 17:14:55,305 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:524]
+2020-08-18 17:15:23,005 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:524]
+2020-08-18 17:20:29,373 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:524]
+2020-08-18 17:20:45,704 ERROR: Exception on /shows/create [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 492, in create_shows
+    form = ShowForm()
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 274, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 131, in process
+    field.process(formdata)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/csrf/core.py", line 43, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 141, in generate_csrf_token
+    token_key=self.meta.csrf_field_name
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 35, in generate_csrf
+    message='A secret key is required to use CSRF.'
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2020-08-18 17:23:27,016 ERROR: Exception on /venues/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 227, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 71, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 82, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
+2020-08-18 17:24:31,869 ERROR: Exception on /artists/4 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 366, in show_artist
+    return render_template('pages/show_artist.html', artist=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_artist.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_artist.html", line 68, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 82, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
+2020-08-18 17:26:18,165 ERROR: Exception on /artists/create [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 427, in create_artist_form
+    form = ArtistForm()
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 274, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 131, in process
+    field.process(formdata)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/csrf/core.py", line 43, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 141, in generate_csrf_token
+    token_key=self.meta.csrf_field_name
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 35, in generate_csrf
+    message='A secret key is required to use CSRF.'
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2020-08-18 17:39:00,608 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:525]
+2020-08-18 17:41:10,957 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:526]
+2020-08-18 17:47:45,909 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:526]
+2020-08-18 18:06:42,105 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:539]
+2020-08-18 18:10:33,870 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:539]
+2020-08-18 18:11:12,372 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:539]
+2020-08-18 18:19:01,539 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:539]
+2020-08-18 19:01:15,515 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:564]
+2020-08-18 19:02:23,502 ERROR: Exception on /venues [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 122, in venues
+    map_ = vanues[index].__dict__
+NameError: name 'vanues' is not defined
+2020-08-18 19:02:23,450 ERROR: Exception on /venues [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 122, in venues
+    map_ = vanues[index].__dict__
+NameError: name 'vanues' is not defined
+2020-08-18 19:07:11,548 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:564]
+2020-08-18 19:07:26,341 ERROR: Exception on /venues [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 128, in venues
+    city_object={"city":map_['city'],'state':map_state,'venues':[venue_object]}
+NameError: name 'map_state' is not defined
+2020-08-18 19:07:52,694 ERROR: Exception on /venues [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 128, in venues
+    city_object={"city":map_['city'],'state':map_['state'],'venues':[venue_object]}
+NameError: name 'map_state' is not defined
+2020-08-19 18:56:44,474 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:573]
+2020-08-19 18:57:15,773 ERROR: Exception on /venues/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 276, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 71, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 94, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
+2020-08-19 18:59:54,277 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:573]
+2020-08-19 19:00:03,374 ERROR: Exception on /venues/create [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 283, in create_venue_form
+    form = VenueForm()
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 274, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/form.py", line 131, in process
+    field.process(formdata)
+  File "/home/walaa/.local/lib/python3.6/site-packages/wtforms/csrf/core.py", line 43, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 141, in generate_csrf_token
+    token_key=self.meta.csrf_field_name
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 35, in generate_csrf
+    message='A secret key is required to use CSRF.'
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2020-08-19 19:02:23,710 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:573]
+2020-08-19 19:11:27,062 INFO: errors [in /home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py:578]
+2020-08-19 19:11:51,145 ERROR: Exception on /venues/1 [GET] [in /home/walaa/.local/lib/python3.6/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 281, in show_venue
+    return render_template('pages/show_venue.html', venue=data)
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/walaa/.local/lib/python3.6/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/walaa/.local/lib/python3.6/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/layouts/main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/templates/pages/show_venue.html", line 71, in block "content"
+    <h6>{{ show.start_time|datetime('full') }}</h6>
+  File "/home/walaa/Desktop/web_course/FSND/projects/01_fyyur/starter_code/app.py", line 99, in format_datetime
+    date = dateutil.parser.parse(value)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1374, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 660, in parse
+    ret = self._build_tzaware(ret, res, tzinfos)
+  File "/home/walaa/.local/lib/python3.6/site-packages/dateutil/parser/_parser.py", line 1201, in _build_tzaware
+    aware = naive.replace(tzinfo=tz.UTC)
+AttributeError: module 'dateutil.tz' has no attribute 'UTC'
